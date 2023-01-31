@@ -4,12 +4,21 @@
   border-radius: 4px;
   background: #0a959a;
   transition: background 0.3s ease;
+
+  &:hover {
+    background: #138184;
+    color: white;
+  }
 }
 
 .btn-cancel {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #6a757e;
+  background: #7c2933;
   transition: background 0.3s ease;
+  &:hover {
+    background: #721e29;
+    color: white;
+  }
 }
