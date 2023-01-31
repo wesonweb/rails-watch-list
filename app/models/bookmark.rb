@@ -4,9 +4,3 @@ class Bookmark < ApplicationRecord
   validates :movie_id, uniqueness: { scope: :list_id } # A bookmark must be linked to a movie and a list, and the [movie, list] pairings should be unique.
   validates :comment, presence: true, length: { minimum: 6 } # The comment of a bookmark cannot be shorter than 6 characters.
 end
-
-# A bookmark must be linked to a movie and a list,
-# and the [movie, list] pairings should be unique.
-
-# A bookmark belongs to a movie
-# A bookmark belongs to a list
