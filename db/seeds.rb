@@ -7,15 +7,19 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require 'rest-client'
+puts 'cleaning database...'
+Movie.destroy_all
 puts 'Getting movies from API...'
+
 def fetch_movies
+  base_poster_url = 'https://image.tmdb.org/t/p/'
   movies = RestClient.get 'https://tmdb.lewagon.com/movie/top_rated'
   movies_array = JSON.parse(movies)['results']
   movies_array.each do |movie|
     Movie.create(
       title: movie['title'],
       overview: movie['overview'],
-      poster_url: movie['poster_path'],
+      poster_url: "#{base_poster_url}w500#{movie['poster_path']}",
       rating: movie['vote_average']
     )
   end
