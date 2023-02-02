@@ -8,7 +8,9 @@
 
 require 'rest-client'
 puts 'cleaning database...'
-Movie.destroy_all
+# Bookmark.destroy_all
+# List.destroy_all
+# Movie.destroy_all
 puts 'Getting movies from API...'
 
 def fetch_movies

@@ -2,7 +2,9 @@
   <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>)">
     <h1><%= @list.name %></h1>
   </div>
-  <span class="movie-tag"><%= pluralize(@list.movies.size, "movie") %></span>
+  <div class="container-md mt-4">
+    <span class="movie-tag">You have <%= pluralize(@list.movies.size, "movie") %> in your list</span>
+  </div>
 </div>
 <div>
 </div>
