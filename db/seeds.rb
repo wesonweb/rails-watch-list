@@ -13,7 +13,7 @@ puts 'Getting movies from API...'
 
 def fetch_movies
   base_poster_url = 'https://image.tmdb.org/t/p/'
-  movies = RestClient.get 'https://tmdb.lewagon.com/movie/top_rated'
+  movies = RestClient.get 'https://tmdb.lewagon.com/movie/popular'
   movies_array = JSON.parse(movies)['results']
   movies_array.each do |movie|
     Movie.create(
