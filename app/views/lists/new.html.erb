@@ -5,6 +5,7 @@
         <h3>Create a new movie list</h3>
         <%= simple_form_for @list do |f| %>
           <%= f.input :name, placeholder: 'Drama' %>
+          <%= f.input :photo, as: :file, label: "Choose an image for your list"%>
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
       </div>

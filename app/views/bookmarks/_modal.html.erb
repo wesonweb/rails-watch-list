@@ -11,6 +11,7 @@
         <div class="modal-body">
           <%= f.association :movie, collection: Movie.all.order(:title), prompt: "Select a movie" %>
           <%= f.input :comment, placeholder: "Enter a comment about the movie" %>
+          <%= f.input :photo, as: :file %>
         </div>
         <div class="modal-footer">
           <%= f.submit "Add movie", class: "btn btn-flat" %>
